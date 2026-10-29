@@ -1,0 +1,385 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.navbar {
+  width: 100%;
+  background: rgba(255, 253, 249, 0.97);
+  border-bottom: 1px solid #eee1d1;
+  box-shadow: 0 4px 18px rgba(64, 32, 15, 0.06);
+  backdrop-filter: blur(12px);
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.header.scrolled .navbar {
+  background: rgba(255, 253, 249, 0.98);
+  box-shadow: 0 5px 20px rgba(64, 32, 15, 0.12);
+}
+
+/* =========================================
+   2. MAIN CONTAINER
+========================================= */
+
+.container {
+  width: min(1200px, 94%);
+  min-height: 84px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  transition: min-height 0.3s ease;
+}
+
+/* Shrink navbar when scrolling */
+
+.header.scrolled .container {
+  min-height: 64px;
+}
+
+/* =========================================
+   3. LOGO AND BRAND
+========================================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: linear-gradient(145deg, #fff0cb, #f5d38b);
+  border: 2px solid #dba83d;
+
+  color: #84281b;
+  font-size: 29px;
+  font-weight: 800;
+
+  box-shadow: 0 3px 10px rgba(150, 83, 19, 0.12);
+
+  transition:
+    width 0.3s ease,
+    height 0.3s ease,
+    font-size 0.3s ease;
+}
+
+.header.scrolled .logo {
+  width: 40px;
+  height: 40px;
+  font-size: 23px;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.brandName {
+  color: #81251c;
+  font-size: 1.08rem;
+  font-weight: 800;
+  line-height: 1.55;
+  white-space: nowrap;
+
+  transition: font-size 0.3s ease;
+}
+
+.header.scrolled .brandName {
+  font-size: 0.95rem;
+}
+
+.brandTagline {
+  color: #8b7563;
+  font-size: 0.73rem;
+  line-height: 1.5;
+
+  transition: opacity 0.3s ease;
+}
+
+.header.scrolled .brandTagline {
+  opacity: 0.8;
+}
+
+/* =========================================
+   4. DESKTOP NAVIGATION
+========================================= */
+
+.navContent {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  display: inline-block;
+  position: relative;
+
+  padding: 9px 0;
+
+  color: #38302b;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+
+  width: 0;
+  height: 2px;
+
+  background: #d85a19;
+  transition: width 0.2s ease;
+}
+
+.navLink:hover {
+  color: #d85a19;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+/* =========================================
+   5. CONTACT BUTTON
+========================================= */
+
+.contactButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  white-space: nowrap;
+  padding: 11px 17px;
+
+  border-radius: 8px;
+  background: #d85a19;
+  color: #fff;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contactButton:hover {
+  background: #81251c;
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   6. MOBILE MENU BUTTON
+========================================= */
+
+.menuToggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 44px;
+  height: 44px;
+
+  border: 1px solid #ead8c4;
+  border-radius: 9px;
+
+  background: #fff9ed;
+  color: #81251c;
+
+  cursor: pointer;
+}
+
+.menuIcon {
+  font-size: 25px;
+  line-height: 1;
+}
+
+/* =========================================
+   7. TABLET AND MOBILE NAVIGATION
+========================================= */
+
+@media (max-width: 1020px) {
+  .container {
+    min-height: 76px;
+  }
+
+  .header.scrolled .container {
+    min-height: 62px;
+  }
+
+  .menuToggle {
+    display: inline-flex;
+  }
+
+  /* Closed menu */
+
+  .navContent {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    padding: 18px 5% 24px;
+
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+
+    background: #fffdf9;
+    border-bottom: 1px solid #eee1d1;
+    box-shadow: 0 12px 20px rgba(64, 32, 15, 0.1);
+  }
+
+  /* Open menu */
+
+  .navContent.navContentOpen {
+    display: flex;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+  }
+
+  .navLink {
+    display: block;
+    padding: 11px 8px;
+    border-bottom: 1px solid #f2e9de;
+    font-size: 1rem;
+  }
+
+  .navLink::after {
+    display: none;
+  }
+
+  .contactButton {
+    width: 100%;
+    min-height: 46px;
+  }
+}
+
+/* =========================================
+   8. SMALL MOBILE SCREENS
+========================================= */
+
+@media (max-width: 480px) {
+  .container {
+    width: 92%;
+    min-height: 70px;
+    gap: 10px;
+  }
+
+  .header.scrolled .container {
+    min-height: 58px;
+  }
+
+  .brand {
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .logo {
+    width: 43px;
+    height: 43px;
+    font-size: 25px;
+  }
+
+  .header.scrolled .logo {
+    width: 36px;
+    height: 36px;
+    font-size: 21px;
+  }
+
+  .brandName {
+    font-size: 0.85rem;
+    white-space: normal;
+    line-height: 1.5;
+  }
+
+  .header.scrolled .brandName {
+    font-size: 0.8rem;
+  }
+
+  .brandTagline {
+    font-size: 0.65rem;
+  }
+
+  .menuToggle {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* =========================================
+   9. SECTION SCROLL SPACING
+========================================= */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+/* =========================================
+   10. REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar,
+  .container,
+  .logo,
+  .brandName,
+  .brandTagline,
+  .navLink,
+  .navLink::after,
+  .contactButton {
+    transition: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

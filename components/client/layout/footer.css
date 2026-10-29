@@ -1,0 +1,573 @@
+/* ========================================
+   BHAKTIYOG FOUNDATION NEPAL
+   Modern Responsive Footer
+======================================== */
+
+.bhakti-footer {
+  --footer-bg: #10291f;
+  --footer-bg-light: #19382b;
+  --footer-accent: #e8b65c;
+  --footer-text: #e8eee9;
+  --footer-muted: #b2c2b7;
+
+  position: relative;
+  overflow: hidden;
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  font-family: inherit;
+  isolation: isolate;
+}
+
+/* Background decorations */
+
+.footer-decoration {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(2px);
+}
+
+.footer-decoration-one {
+  width: 420px;
+  height: 420px;
+  top: -230px;
+  left: 10%;
+  background: radial-gradient(
+    circle,
+    rgba(232, 182, 92, 0.11) 0%,
+    transparent 70%
+  );
+}
+
+.footer-decoration-two {
+  width: 500px;
+  height: 500px;
+  right: -180px;
+  bottom: -300px;
+  background: radial-gradient(
+    circle,
+    rgba(66, 125, 88, 0.18) 0%,
+    transparent 70%
+  );
+}
+
+/* Main layout */
+
+.footer-container {
+  width: min(100% - 64px, 1440px);
+  margin: 0 auto;
+  padding: 76px 0 64px;
+
+  display: grid;
+  grid-template-columns: 1.35fr 0.75fr 1.15fr 1.25fr;
+  gap: 48px;
+}
+
+/* Brand */
+
+.footer-brand {
+  max-width: 370px;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 24px;
+
+  color: var(--footer-text);
+  text-decoration: none;
+}
+
+.footer-logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
+
+  color: var(--footer-accent);
+  border: 1px solid rgba(232, 182, 92, 0.4);
+  border-radius: 16px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(232, 182, 92, 0.13),
+    rgba(232, 182, 92, 0.03)
+  );
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.footer-logo:hover .footer-logo-icon {
+  background: rgba(232, 182, 92, 0.18);
+  transform: translateY(-3px);
+}
+
+.footer-logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer-brand-name {
+  font-size: 19px;
+  font-weight: 750;
+  line-height: 1.3;
+  letter-spacing: -0.4px;
+}
+
+.footer-brand-country {
+  color: var(--footer-accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.footer-description {
+  margin: 0 0 22px;
+  color: var(--footer-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.footer-mission {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 25px;
+  color: var(--footer-accent);
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.footer-mission svg {
+  flex-shrink: 0;
+}
+
+/* Social links */
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 41px;
+  height: 41px;
+
+  color: var(--footer-text);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.04);
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-social-link:hover {
+  color: var(--footer-bg);
+  background: var(--footer-accent);
+  border-color: var(--footer-accent);
+  transform: translateY(-3px);
+}
+
+/* Footer columns */
+
+.footer-column {
+  min-width: 0;
+}
+
+.footer-heading {
+  position: relative;
+  margin: 7px 0 28px;
+  padding-bottom: 15px;
+
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.footer-heading::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 35px;
+  height: 2px;
+
+  content: "";
+  background: var(--footer-accent);
+  border-radius: 10px;
+}
+
+/* Navigation links */
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  width: fit-content;
+  max-width: 100%;
+
+  color: var(--footer-muted);
+  font-size: 14px;
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-links a svg {
+  opacity: 0;
+  color: var(--footer-accent);
+  transition: opacity 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: var(--footer-accent);
+  transform: translateX(4px);
+}
+
+.footer-links a:hover svg {
+  opacity: 1;
+}
+
+/* Mission cards */
+
+.footer-work {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-work-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+
+  margin-bottom: 23px;
+}
+
+.footer-work-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+
+  color: var(--footer-accent);
+  border: 1px solid rgba(232, 182, 92, 0.18);
+  border-radius: 12px;
+  background: rgba(232, 182, 92, 0.08);
+}
+
+.footer-work-card h4 {
+  margin: 2px 0 7px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.footer-work-card p {
+  margin: 0;
+  color: var(--footer-muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.footer-preacher {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+
+  margin-top: 1px;
+  padding: 12px;
+
+  color: var(--footer-muted);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.035);
+
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.footer-status-dot {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  margin-top: 5px;
+
+  border-radius: 50%;
+  background: #7bd99b;
+  box-shadow: 0 0 9px rgba(123, 217, 155, 0.35);
+}
+
+/* Contact information */
+
+.footer-contact-intro {
+  margin: -7px 0 23px;
+  color: var(--footer-muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  min-width: 0;
+  margin-bottom: 19px;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+
+  color: var(--footer-accent);
+  border: 1px solid rgba(232, 182, 92, 0.18);
+  border-radius: 12px;
+  background: rgba(232, 182, 92, 0.07);
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease;
+}
+
+.footer-contact-item:hover .footer-contact-icon {
+  color: var(--footer-bg);
+  background: var(--footer-accent);
+}
+
+.footer-contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.footer-contact-label {
+  color: var(--footer-muted);
+  font-size: 11px;
+}
+
+.footer-contact-value {
+  overflow-wrap: anywhere;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.6;
+
+  transition: color 0.25s ease;
+}
+
+.footer-contact-item:hover .footer-contact-value {
+  color: var(--footer-accent);
+}
+
+/* Contact button */
+
+.footer-contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: 100%;
+  margin-top: 7px;
+  padding: 13px 15px;
+
+  color: #172b20;
+  border: 1px solid var(--footer-accent);
+  border-radius: 10px;
+
+  background: var(--footer-accent);
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-contact-button:hover {
+  background: #f3cc81;
+  border-color: #f3cc81;
+  transform: translateY(-2px);
+}
+
+/* Copyright bar */
+
+.footer-bottom {
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  width: min(100% - 64px, 1440px);
+  min-height: 76px;
+  margin: 0 auto;
+}
+
+.footer-bottom-inner p {
+  margin: 0;
+  color: var(--footer-muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.footer-blessing {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-blessing svg {
+  color: var(--footer-accent);
+  flex-shrink: 0;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+/* Tablets and smaller laptops */
+
+@media (max-width: 1100px) {
+  .footer-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 45px 55px;
+    padding: 65px 0;
+  }
+
+  .footer-brand {
+    max-width: 430px;
+  }
+
+  .footer-contact {
+    max-width: 430px;
+  }
+}
+
+/* Mobile devices */
+
+@media (max-width: 600px) {
+  .footer-container {
+    width: calc(100% - 40px);
+    grid-template-columns: minmax(0, 1fr);
+    gap: 38px;
+    padding: 48px 0;
+  }
+
+  .footer-brand {
+    max-width: 100%;
+  }
+
+  .footer-heading {
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+
+  .footer-logo-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer-brand-name {
+    font-size: 18px;
+  }
+
+  .footer-description {
+    font-size: 13px;
+  }
+
+  .footer-links {
+    gap: 17px;
+  }
+
+  .footer-links a svg {
+    opacity: 1;
+  }
+
+  .footer-contact {
+    max-width: 100%;
+  }
+
+  .footer-bottom-inner {
+    width: calc(100% - 40px);
+    min-height: auto;
+    padding: 23px 0;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .footer-bottom-inner p {
+    font-size: 11px;
+  }
+}
+
+/* Reduced motion accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .bhakti-footer *,
+  .bhakti-footer *::before,
+  .bhakti-footer *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
