@@ -5,11 +5,11 @@ import Link from "next/link";
 import "./navbar.css";
 
 const navItems = [
-  { label: "गृहपृष्ठ", href: "#home" },
-  { label: "हाम्रो परिचय", href: "#about" },
-  { label: "उद्देश्य", href: "#mission" },
-  { label: "कार्यक्रम", href: "#programs" },
-  { label: "ग्यालरी", href: "#gallery" },
+  { label: "गृहपृष्ठ", href: "/" },
+  { label: "हाम्रो परिचय", href: "/about-us" },
+  { label: "उद्देश्य", href: "/mission" },
+  { label: "कार्यक्रम", href: "/programs" },
+  { label: "ग्यालरी", href: "/gallery" },
 ];
 
 export default function Navbar() {
@@ -46,9 +46,7 @@ export default function Navbar() {
             </span>
 
             <span className="brandText">
-              <span className="brandName">
-                भक्तियोग फाउन्डेसन नेपाल
-              </span>
+              <span className="brandName">भक्तियोग फाउन्डेसन नेपाल</span>
               <span className="brandTagline">
                 भक्ति • ज्ञान • सेवा • संस्कार
               </span>
@@ -63,16 +61,12 @@ export default function Navbar() {
             aria-expanded={menuOpen}
             aria-controls="main-navigation"
           >
-            <span className="menuIcon">
-              {menuOpen ? "✕" : "☰"}
-            </span>
+            <span className="menuIcon">{menuOpen ? "✕" : "☰"}</span>
           </button>
 
           <div
             id="main-navigation"
-            className={`navContent ${
-              menuOpen ? "navContentOpen" : ""
-            }`}
+            className={`navContent ${menuOpen ? "navContentOpen" : ""}`}
           >
             <ul className="navLinks">
               {navItems.map((item) => (
@@ -88,11 +82,7 @@ export default function Navbar() {
               ))}
             </ul>
 
-            <Link
-              href="#contact"
-              className="contactButton"
-              onClick={closeMenu}
-            >
+            <Link href="#contact" className="contactButton" onClick={closeMenu}>
               सम्पर्क गर्नुहोस् →
             </Link>
           </div>

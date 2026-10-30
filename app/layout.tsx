@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/client/layout/footer";
+import Navbar from "@/components/client/layout/navbar";
+import Providers from "@/providers";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bhaktiyog Foundation Nepal",
+  title: "भक्तियोग फाउण्डेशन नेपाल",
 
   description:
     "Promoting Sanatan Vedic Dharma, Bhakti Yoga, and spiritual awareness.",
@@ -27,7 +30,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Providers>
+          {children}
+          <Toaster position="top-center" />
+        </Providers>
+      </body>
     </html>
   );
 }

@@ -33,7 +33,7 @@ export default function Hero() {
           </p>
 
           <div className="heroActions">
-            <Link href="#about" className="heroButton primary">
+            <Link href="/about-us" className="heroButton primary">
               हाम्रो परिचय
             </Link>
 
