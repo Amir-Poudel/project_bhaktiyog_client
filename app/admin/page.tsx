@@ -1,7 +1,7 @@
 import Hero from "@/components/client/Hero/hero";
 import Navbar from "@/components/client/layout/navbar";
+import Image from "next/image";
 import Footer from "@/components/client/layout/footer";
-import Mission from "@/components/client/Mission/mission";
 
 // export default function Home() {
 //   return (
@@ -9,7 +9,7 @@ import Mission from "@/components/client/Mission/mission";
 //       <section className="min-h-[80vh]">
 //         <Navbar />
 //         <Hero />
-        
+
 //       </section>
 //     </main>
 //   );
@@ -18,27 +18,21 @@ import Mission from "@/components/client/Mission/mission";
 export default function HomePage() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <main>
         <Hero />
 
-        <section id="about">
-          {/* About section */}
-        </section>
+        <section id="about">{/* About section */}</section>
 
-        <Mission />
+        <section id="mission">{/* Mission section */}</section>
 
-        <section id="programs">
-          {/* Programs section */}
-        </section>
+        <section id="programs">{/* Programs section */}</section>
 
-        <section id="gallery">
-          {/* Gallery section */}
-        </section>
+        <section id="gallery">{/* Gallery section */}</section>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

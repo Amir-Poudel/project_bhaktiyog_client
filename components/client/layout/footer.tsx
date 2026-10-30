@@ -53,8 +53,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               aria-label="Facebook"
               className="footer-social-link"
-            >
-            </a>
+            ></a>
 
             <a
               href="https://www.instagram.com/"
@@ -62,8 +61,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               aria-label="Instagram"
               className="footer-social-link"
-            >
-            </a>
+            ></a>
           </div>
         </div>
 

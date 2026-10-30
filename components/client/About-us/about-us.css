@@ -1,0 +1,290 @@
+.about-page {
+  width: 100%;
+  overflow: clip;
+  background: #111b19;
+  color: #fffdf5;
+}
+
+.spiritual-story {
+  position: relative;
+  height: 100vh;
+  height: 100svh;
+  min-height: 540px;
+}
+
+.spiritual-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  min-height: 540px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #17231e;
+}
+
+.spiritual-background {
+  position: absolute;
+  z-index: -3;
+  inset: -3%;
+  background-image: url("/images/about-spiritual.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.spiritual-overlay {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 18, 16, 0.38) 0%,
+      rgba(8, 18, 16, 0.3) 32%,
+      rgba(8, 18, 16, 0.48) 65%,
+      rgba(8, 18, 16, 0.78) 100%
+    ),
+    linear-gradient(90deg, rgba(7, 15, 13, 0.24), rgba(7, 15, 13, 0.02) 85%);
+}
+
+/* Center the heading and visible text together */
+.spiritual-content {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: min(1180px, calc(100% - 80px));
+  height: 100%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.spiritual-title-area {
+  position: relative;
+  z-index: 2;
+  flex: 0 0 auto;
+  width: 100%;
+  margin: 0 0 clamp(17px, 2.5vh, 25px);
+  text-align: center;
+}
+
+.spiritual-heading {
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #fffdf5;
+  font-size: clamp(41px, 5.95vw, 75px);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 1.05;
+  text-wrap: balance;
+  text-shadow: 0 5px 30px rgba(0, 0, 0, 0.24);
+}
+
+/* Nine-line rolling text window */
+.spiritual-text-viewport {
+  position: relative;
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 1120px;
+  min-height: 0;
+  overflow: hidden;
+  margin: 0 auto;
+  will-change: height;
+}
+
+.spiritual-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(11px, 1.5vh, 15px);
+  width: 100%;
+  will-change: transform;
+}
+
+.spiritual-line {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0;
+  color: rgba(255, 253, 245, 0.97);
+  font-size: clamp(21px, 2.98vw, 39px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.16;
+  text-align: center;
+  text-wrap: pretty;
+  text-shadow: 0 3px 22px rgba(0, 0, 0, 0.26);
+}
+
+/* Section after the scrolling story */
+.about-next-section {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  min-height: 55vh;
+  padding: 85px 24px 105px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at top, rgba(179, 151, 94, 0.12), transparent 62%),
+    #111b19;
+}
+
+.next-eyebrow {
+  margin: 0 0 15px;
+  color: #d9bd7c;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+}
+
+.about-next-section h2 {
+  max-width: 850px;
+  margin: 0;
+  color: #fffdf5;
+  font-size: clamp(31px, 4.7vw, 61px);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.about-next-section > p:last-child {
+  max-width: 650px;
+  margin: 20px auto 0;
+  color: rgba(255, 253, 245, 0.75);
+  font-size: clamp(14px, 1.28vw, 17px);
+  line-height: 1.8;
+}
+
+/* Tablet */
+@media (max-width: 1020px) {
+  .spiritual-content {
+    width: calc(100% - 56px);
+  }
+
+  .spiritual-heading {
+    font-size: clamp(39px, 6.8vw, 61px);
+  }
+
+  .spiritual-line {
+    font-size: clamp(22px, 3.4vw, 32px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .spiritual-story,
+  .spiritual-sticky {
+    min-height: 540px;
+  }
+
+  .spiritual-background {
+    background-position: 54% center;
+  }
+
+  .spiritual-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(8, 18, 16, 0.4) 0%,
+      rgba(8, 18, 16, 0.43) 35%,
+      rgba(8, 18, 16, 0.68) 72%,
+      rgba(8, 18, 16, 0.84) 100%
+    );
+  }
+
+  .spiritual-content {
+    width: calc(100% - 36px);
+    padding: 28px 0;
+  }
+
+  .spiritual-title-area {
+    margin-bottom: 17px;
+  }
+
+  .spiritual-heading {
+    font-size: clamp(34px, 8.9vw, 49px);
+    line-height: 1.02;
+    letter-spacing: -0.05em;
+  }
+
+  .spiritual-copy {
+    gap: 12px;
+  }
+
+  .spiritual-line {
+    font-size: clamp(19px, 5.1vw, 25px);
+    line-height: 1.22;
+    letter-spacing: -0.025em;
+  }
+
+  .about-next-section {
+    min-height: 48vh;
+    padding: 65px 22px 78px;
+  }
+
+  .about-next-section h2 {
+    font-size: clamp(28px, 7.3vw, 42px);
+  }
+
+  .about-next-section > p:last-child {
+    font-size: 14px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 380px) {
+  .spiritual-content {
+    width: calc(100% - 30px);
+  }
+
+  .spiritual-heading {
+    font-size: 33px;
+  }
+
+  .spiritual-line {
+    font-size: 18px;
+  }
+
+  .spiritual-copy {
+    gap: 10px;
+  }
+}
+
+/* Short desktop screens */
+@media (max-height: 650px) and (min-width: 601px) {
+  .spiritual-content {
+    padding: 20px 0;
+  }
+
+  .spiritual-title-area {
+    margin-bottom: 14px;
+  }
+
+  .spiritual-heading {
+    font-size: clamp(36px, 5vw, 58px);
+  }
+
+  .spiritual-line {
+    font-size: clamp(20px, 2.5vw, 30px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spiritual-background {
+    will-change: auto;
+  }
+
+  .spiritual-copy {
+    will-change: auto;
+  }
+}
