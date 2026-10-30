@@ -1,7 +1,7 @@
 import Hero from "@/components/client/Hero/hero";
 import Navbar from "@/components/client/layout/navbar";
-import Image from "next/image";
 import Footer from "@/components/client/layout/footer";
+import Mission from "@/components/client/Mission/mission";
 
 // export default function Home() {
 //   return (
@@ -27,9 +27,7 @@ export default function HomePage() {
           {/* About section */}
         </section>
 
-        <section id="mission">
-          {/* Mission section */}
-        </section>
+        <Mission />
 
         <section id="programs">
           {/* Programs section */}

@@ -173,6 +173,14 @@
   width: 100%;
 }
 
+.navLink.isActive {
+  color: #81251c;
+}
+
+.navLink.isActive::after {
+  width: 100%;
+}
+
 /* =========================================
    5. CONTACT BUTTON
 ========================================= */
@@ -289,7 +297,12 @@
   }
 
   .navLink::after {
-    display: none;
+    bottom: 4px;
+    left: 8px;
+  }
+
+  .navLink.isActive::after {
+    width: 34px;
   }
 
   .contactButton {

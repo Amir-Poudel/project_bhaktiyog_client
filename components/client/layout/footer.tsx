@@ -16,7 +16,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bhakti-footer">
+    <footer id="contact" className="bhakti-footer">
       {/* Decorative background */}
       <div className="footer-decoration footer-decoration-one" />
       <div className="footer-decoration footer-decoration-two" />
